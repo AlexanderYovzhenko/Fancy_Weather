@@ -1,2 +1,4 @@
-# https://goldenmanbel.github.io/Fancy-weather/
-Weather website
+# Fancy Weather
+
+## Website https://goldenmanbel.github.io/Fancy_Weather
+
