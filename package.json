@@ -4,6 +4,8 @@
   "description": "fancy weather programme",
   "main": "index.js",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "dev": "webpack --mode development",
     "build": "webpack --mode production",
     "watch": "webpack --mode development --watch",
@@ -34,6 +36,7 @@
     "eslint-loader": "^4.0.2",
     "eslint-webpack-plugin": "^2.5.2",
     "file-loader": "^6.2.0",
+    "gh-pages": "^5.0.0",
     "html-webpack-plugin": "^5.3.1",
     "less": "^4.1.1",
     "less-loader": "^8.0.0",
