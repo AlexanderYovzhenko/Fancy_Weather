@@ -33,7 +33,7 @@ module.exports = {
     new CopyWebpackPlugin({
       patterns: [
       {
-        from: path.resolve(__dirname, 'src/img/favicon/weather.ico'),
+        from: path.resolve(__dirname, 'src/img'),
         to: path.resolve(__dirname, 'dist')
       }
       ]
