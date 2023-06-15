@@ -76,7 +76,7 @@ async function serverRequest(url, message) {
 function updateWeatherInformation() {
     temperatureNow.innerText = `${changeDegrees(Math.round(data.data[0].temp))}`;
 
-    iconWeather.setAttribute('src', `img/icons/animatedIcons/${data.data[0].weather.icon}.svg`);
+    iconWeather.setAttribute('src', `icons/animatedIcons/${data.data[0].weather.icon}.svg`);
 
     weatherDescription.innerText = `${data.data[0].weather.description.toUpperCase()}`;
 
@@ -97,9 +97,9 @@ function updateWeatherInformationThreeDay() {
     changeLanguageDayName(nameTomorrow, 1);
     changeLanguageDayName(nameDayAfterTomorrow, 2);
 
-    iconToday.setAttribute('src', `img/icons/animatedIcons/${data.data[0].weather.icon}.svg`);
-    iconTomorrow.setAttribute('src', `img/icons/animatedIcons/${data.data[1].weather.icon}.svg`);
-    iconDayAfterTomorrow.setAttribute('src', `img/icons/animatedIcons/${data.data[2].weather.icon}.svg`);
+    iconToday.setAttribute('src', `icons/animatedIcons/${data.data[0].weather.icon}.svg`);
+    iconTomorrow.setAttribute('src', `icons/animatedIcons/${data.data[1].weather.icon}.svg`);
+    iconDayAfterTomorrow.setAttribute('src', `icons/animatedIcons/${data.data[2].weather.icon}.svg`);
 }
 
 //change the language of the day name
