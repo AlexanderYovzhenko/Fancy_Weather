@@ -12,6 +12,7 @@ const scriptWeatherInformation = require('./weather-information');
 window.onload = function startSettings() {
     localStorage.refreshingMap = true;  
     scriptSettings.changeLanguageKey();
+
     if(localStorage.degrees === 'true') {
         scriptSettings.buttonSelectUnits.checked = 'true';   
     }
@@ -20,6 +21,7 @@ window.onload = function startSettings() {
 //get user location
 async function getGeolocation() {
     const url = 'https://ipinfo.io?token=16681db3879947';
+
     try {
         const data = await scriptWeatherInformation.serverRequest(url, 'Failed to load geolocation data');
         addCity(data);
@@ -30,7 +32,7 @@ async function getGeolocation() {
 
 // add city in local storage
 function addCity(data) {
-    localStorage.city = data.city || 'Minsk';
+    localStorage.city = localStorage.city || data.city || 'Minsk';
     // if(localStorage.city.includes("'")) {
     //     localStorage.city = localStorage.city.split('').filter(letter => letter !== "'").join('');
     //     scriptLocation.getGeocoding();
