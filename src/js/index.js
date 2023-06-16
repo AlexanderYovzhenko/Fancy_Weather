@@ -30,13 +30,14 @@ async function getGeolocation() {
 
 // add city in local storage
 function addCity(data) {
-    localStorage.city = data.city || 'Минск';
-    if(localStorage.city.includes("'")) {
-        localStorage.city = localStorage.city.split('').filter(letter => letter !== "'").join('');
-        scriptLocation.getGeocoding();
-    } else {
-        scriptLocation.getGeocoding();
-    }
+    localStorage.city = data.city || 'Minsk';
+    // if(localStorage.city.includes("'")) {
+    //     localStorage.city = localStorage.city.split('').filter(letter => letter !== "'").join('');
+    //     scriptLocation.getGeocoding();
+    // } else {
+    //     scriptLocation.getGeocoding();
+    // }
 }
 
-getGeolocation();
+// getGeolocation();
+addCity({ city: 'Minsk' });
