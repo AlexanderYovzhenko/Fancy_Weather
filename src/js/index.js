@@ -37,6 +37,7 @@ function addCity(data) {
     // } else {
     //     scriptLocation.getGeocoding();
     // }
+    
     scriptLocation.getGeocoding();
 }
 
